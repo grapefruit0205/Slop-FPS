@@ -1,0 +1,51 @@
+# Unity/generated/local files
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Ll]ogs/
+[Bb]uild/
+[Bb]uilds/
+UserSettings/
+.vs/
+.idea/
+.vscode/
+*.csproj
+*.sln
+*.user
+*.userprefs
+*.pidb
+*.pdb
+*.log
+.DS_Store
+node_modules/
+# Deployment secrets and output
+.env
+.env.*
+!.env.example
+Server/deploy/config.env
+Server/deploy/out/
+Server/deploy/.build/
+*.pem
+*.pfx
+*.key
+*.zip
+# Art excluded from this public source edition
+Assets/Standard Assets/
+Assets/Models/
+Assets/Art/Military/Characters/
+Assets/Scenes/
+Assets/Prefabs/
+Assets/Animations/
+Assets/Maps/
+Assets/Textures/
+Assets/Materials/
+Assets/TextMesh Pro/
+Assets/TextMesh Pro.meta
+Assets/Scenes.meta
+Assets/Prefabs.meta
+Assets/Animations.meta
+Assets/Maps.meta
+Assets/Materials.meta
+Assets/Models.meta
+Assets/Textures.meta
+Assets/Standard Assets.meta

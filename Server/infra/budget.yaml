@@ -1,0 +1,52 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Monthly cost budget for Amazon GameLift with e-mail alerts.
+
+Parameters:
+  Amount:
+    Type: Number
+    Default: 50
+    MinValue: 1
+    Description: Monthly budget in USD.
+  Email:
+    Type: String
+    AllowedPattern: '[^@\s]+@[^@\s]+\.[^@\s]+'
+    Description: Address that receives the alerts (AWS sends no confirmation, it just starts mailing).
+  BudgetName:
+    Type: String
+    Default: fps-gamelift-monthly
+
+Resources:
+  GameLiftBudget:
+    Type: AWS::Budgets::Budget
+    Properties:
+      Budget:
+        BudgetName: !Ref BudgetName
+        BudgetType: COST
+        TimeUnit: MONTHLY
+        BudgetLimit:
+          Amount: !Ref Amount
+          Unit: USD
+        CostFilters:
+          Service:
+            - Amazon GameLift
+      NotificationsWithSubscribers:
+        - Notification:
+            NotificationType: ACTUAL
+            ComparisonOperator: GREATER_THAN
+            Threshold: 80
+            ThresholdType: PERCENTAGE
+          Subscribers:
+            - SubscriptionType: EMAIL
+              Address: !Ref Email
+        - Notification:
+            NotificationType: FORECASTED
+            ComparisonOperator: GREATER_THAN
+            Threshold: 100
+            ThresholdType: PERCENTAGE
+          Subscribers:
+            - SubscriptionType: EMAIL
+              Address: !Ref Email
+
+Outputs:
+  BudgetName:
+    Value: !Ref GameLiftBudget

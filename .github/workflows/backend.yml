@@ -1,0 +1,21 @@
+name: Backend and public-content checks
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: Server/backend/package-lock.json
+      - run: npm ci --ignore-scripts
+        working-directory: Server/backend
+      - run: npm test
+        working-directory: Server/backend
+      - run: python3 tools/check_public.py

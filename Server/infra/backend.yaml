@@ -1,0 +1,182 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: >-
+  FPS lobby backend - API Gateway HTTP API + one Lambda (Node.js 22, arm64) that
+  lists/creates/joins GameLift game sessions. Plain CloudFormation (no SAM transform);
+  code is read from S3 (deploy-backend.sh uploads the zip first).
+
+Parameters:
+  ProjectName:
+    Type: String
+    Default: fps
+    AllowedPattern: '[a-z0-9-]{1,20}'
+    Description: Prefix for resource names.
+  FleetAliasId:
+    Type: String
+    AllowedPattern: 'alias-[A-Za-z0-9-]+'
+    Description: GameLift alias id the lobby creates/searches game sessions on.
+  AllowedOrigins:
+    Type: CommaDelimitedList
+    Default: 'http://localhost:8080'
+    Description: >-
+      Comma separated browser origins allowed by CORS (e.g. https://dxxxx.cloudfront.net).
+      Use * only for testing.
+  MaxPlayers:
+    Type: Number
+    Default: 8
+    MinValue: 1
+    MaxValue: 200
+  Location:
+    Type: String
+    Default: ''
+    Description: Optional GameLift fleet location (Region code). Empty = fleet home Region.
+  CodeBucket:
+    Type: String
+    Description: S3 bucket holding the Lambda zip.
+  CodeKey:
+    Type: String
+    Description: S3 key of the Lambda zip.
+  ThrottleBurst:
+    Type: Number
+    Default: 50
+  ThrottleRate:
+    Type: Number
+    Default: 20
+
+Resources:
+  LambdaLogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub '/aws/lambda/${ProjectName}-lobby'
+      RetentionInDays: 14
+
+  ApiAccessLogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub '/aws/apigateway/${ProjectName}-lobby'
+      RetentionInDays: 14
+
+  LambdaRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal: { Service: lambda.amazonaws.com }
+            Action: sts:AssumeRole
+      Policies:
+        - PolicyName: lobby
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Sid: Logs
+                Effect: Allow
+                Action: [logs:CreateLogStream, logs:PutLogEvents]
+                Resource: !GetAtt LambdaLogGroup.Arn
+              # NOTE: GameLift's session-level actions (SearchGameSessions, DescribeGameSessions,
+              # CreatePlayerSession) cannot be meaningfully scoped to a resource ARN
+              # (game session / player session ARNs are not known up front), so Resource is "*".
+              # The blast radius is limited by listing ONLY these four actions.
+              - Sid: GameLiftSessions
+                Effect: Allow
+                Action:
+                  - gamelift:SearchGameSessions
+                  - gamelift:CreateGameSession
+                  - gamelift:DescribeGameSessions
+                  - gamelift:CreatePlayerSession
+                Resource: '*'
+
+  LobbyFunction:
+    Type: AWS::Lambda::Function
+    DependsOn: LambdaLogGroup
+    Properties:
+      FunctionName: !Sub '${ProjectName}-lobby'
+      Runtime: nodejs22.x
+      Architectures: [arm64]
+      Handler: index.handler
+      Timeout: 10
+      MemorySize: 256
+      Role: !GetAtt LambdaRole.Arn
+      Code:
+        S3Bucket: !Ref CodeBucket
+        S3Key: !Ref CodeKey
+      Environment:
+        Variables:
+          FLEET_ALIAS_ID: !Ref FleetAliasId
+          LOCATION: !Ref Location
+          MAX_PLAYERS: !Ref MaxPlayers
+          ALLOWED_ORIGINS: !Join [',', !Ref AllowedOrigins]
+
+  HttpApi:
+    Type: AWS::ApiGatewayV2::Api
+    Properties:
+      Name: !Sub '${ProjectName}-lobby'
+      ProtocolType: HTTP
+      CorsConfiguration:
+        AllowOrigins: !Ref AllowedOrigins
+        AllowMethods: [GET, POST, OPTIONS]
+        AllowHeaders: [content-type]
+        MaxAge: 600
+
+  Integration:
+    Type: AWS::ApiGatewayV2::Integration
+    Properties:
+      ApiId: !Ref HttpApi
+      IntegrationType: AWS_PROXY
+      IntegrationUri: !GetAtt LobbyFunction.Arn
+      PayloadFormatVersion: '2.0'
+      TimeoutInMillis: 12000
+
+  RouteListRooms:
+    Type: AWS::ApiGatewayV2::Route
+    Properties:
+      ApiId: !Ref HttpApi
+      RouteKey: 'GET /rooms'
+      Target: !Sub 'integrations/${Integration}'
+  RouteCreateRoom:
+    Type: AWS::ApiGatewayV2::Route
+    Properties:
+      ApiId: !Ref HttpApi
+      RouteKey: 'POST /rooms'
+      Target: !Sub 'integrations/${Integration}'
+  RouteJoinRoom:
+    Type: AWS::ApiGatewayV2::Route
+    Properties:
+      ApiId: !Ref HttpApi
+      RouteKey: 'POST /rooms/join'
+      Target: !Sub 'integrations/${Integration}'
+  RouteQuickJoin:
+    Type: AWS::ApiGatewayV2::Route
+    Properties:
+      ApiId: !Ref HttpApi
+      RouteKey: 'POST /quickjoin'
+      Target: !Sub 'integrations/${Integration}'
+
+  Stage:
+    Type: AWS::ApiGatewayV2::Stage
+    Properties:
+      ApiId: !Ref HttpApi
+      StageName: $default
+      AutoDeploy: true
+      DefaultRouteSettings:
+        ThrottlingBurstLimit: !Ref ThrottleBurst
+        ThrottlingRateLimit: !Ref ThrottleRate
+      AccessLogSettings:
+        DestinationArn: !GetAtt ApiAccessLogGroup.Arn
+        Format: >-
+          {"requestId":"$context.requestId","ip":"$context.identity.sourceIp","time":"$context.requestTime","method":"$context.httpMethod","path":"$context.path","status":"$context.status","latencyMs":"$context.responseLatency","integrationError":"$context.integrationErrorMessage"}
+
+  InvokePermission:
+    Type: AWS::Lambda::Permission
+    Properties:
+      Action: lambda:InvokeFunction
+      FunctionName: !Ref LobbyFunction
+      Principal: apigateway.amazonaws.com
+      SourceArn: !Sub 'arn:${AWS::Partition}:execute-api:${AWS::Region}:${AWS::AccountId}:${HttpApi}/*/*'
+
+Outputs:
+  ApiUrl:
+    Description: Base URL of the lobby API (no trailing slash)
+    Value: !Sub 'https://${HttpApi}.execute-api.${AWS::Region}.${AWS::URLSuffix}'
+  FunctionName:
+    Value: !Ref LobbyFunction

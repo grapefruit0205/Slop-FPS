@@ -1,0 +1,1070 @@
+{
+  "entries": [
+    {
+      "ko": "콜사인",
+      "en": "Callsign",
+      "zh": "呼号"
+    },
+    {
+      "ko": "이름을 입력하세요",
+      "en": "Enter your name",
+      "zh": "输入名称"
+    },
+    {
+      "ko": "선택한 방 참가",
+      "en": "Join selected room",
+      "zh": "加入所选房间"
+    },
+    {
+      "ko": "빠른 참가",
+      "en": "Quick join",
+      "zh": "快速加入"
+    },
+    {
+      "ko": "자동 매칭",
+      "en": "Auto match",
+      "zh": "自动匹配"
+    },
+    {
+      "ko": "새 작전 이름",
+      "en": "New room name",
+      "zh": "新房间名称"
+    },
+    {
+      "ko": "비워두면 자동 생성",
+      "en": "Leave blank to auto name",
+      "zh": "留空自动命名"
+    },
+    {
+      "ko": "모드 변경",
+      "en": "Change mode",
+      "zh": "切换模式"
+    },
+    {
+      "ko": "맵 변경",
+      "en": "Change map",
+      "zh": "切换地图"
+    },
+    {
+      "ko": "방 만들기",
+      "en": "Create room",
+      "zh": "创建房间"
+    },
+    {
+      "ko": "2명부터 시작 · 최대 8명",
+      "en": "Starts with 2 · Max 8",
+      "zh": "2人开始 · 最多8人"
+    },
+    {
+      "ko": "다시 연결",
+      "en": "Reconnect",
+      "zh": "重新连接"
+    },
+    {
+      "ko": "작전 목록",
+      "en": "Room list",
+      "zh": "房间列表"
+    },
+    {
+      "ko": "방 이름",
+      "en": "Room name",
+      "zh": "房间名称"
+    },
+    {
+      "ko": "맵 · 모드",
+      "en": "Map · Mode",
+      "zh": "地图 · 模式"
+    },
+    {
+      "ko": "인원",
+      "en": "Players",
+      "zh": "玩家"
+    },
+    {
+      "ko": "참가",
+      "en": "Join",
+      "zh": "加入"
+    },
+    {
+      "ko": "서버 연결 중",
+      "en": "Connecting",
+      "zh": "正在连接"
+    },
+    {
+      "ko": "연결됨",
+      "en": "Connected",
+      "zh": "已连接"
+    },
+    {
+      "ko": "작전 합류 중",
+      "en": "Joining room",
+      "zh": "正在加入房间"
+    },
+    {
+      "ko": "연결 끊김",
+      "en": "Disconnected",
+      "zh": "已断开"
+    },
+    {
+      "ko": "콜사인을 먼저 입력하세요.",
+      "en": "Enter a callsign first.",
+      "zh": "请先输入呼号。"
+    },
+    {
+      "ko": "열린 작전이 없습니다.\n왼쪽에서 방을 만들거나 빠른 참가를 눌러보세요.",
+      "en": "No open rooms.\nCreate a room or use Quick join.",
+      "zh": "暂无开放房间。\n请创建房间或快速加入。"
+    },
+    {
+      "ko": "<color=#ECEAE3>ENTER</color>  참가",
+      "en": "<color=#ECEAE3>ENTER</color>  Join",
+      "zh": "<color=#ECEAE3>ENTER</color>  加入"
+    },
+    {
+      "ko": "<color=#ECEAE3>ENTER</color>  참가      <color=#ECEAE3>ESC</color>  종료",
+      "en": "<color=#ECEAE3>ENTER</color>  Join      <color=#ECEAE3>ESC</color>  Quit",
+      "zh": "<color=#ECEAE3>ENTER</color>  加入      <color=#ECEAE3>ESC</color>  退出"
+    },
+    {
+      "ko": "일시정지",
+      "en": "Paused",
+      "zh": "已暂停"
+    },
+    {
+      "ko": "계속하기",
+      "en": "Resume",
+      "zh": "继续"
+    },
+    {
+      "ko": "설정",
+      "en": "Settings",
+      "zh": "设置"
+    },
+    {
+      "ko": "그래픽",
+      "en": "Graphics",
+      "zh": "画面"
+    },
+    {
+      "ko": "조작키",
+      "en": "Controls",
+      "zh": "按键"
+    },
+    {
+      "ko": "작전 이탈 (로비로)",
+      "en": "Leave room (lobby)",
+      "zh": "离开房间（大厅）"
+    },
+    {
+      "ko": "조작",
+      "en": "Input",
+      "zh": "操作"
+    },
+    {
+      "ko": "마우스 감도",
+      "en": "Mouse sensitivity",
+      "zh": "鼠标灵敏度"
+    },
+    {
+      "ko": "Y축 반전",
+      "en": "Invert Y",
+      "zh": "反转Y轴"
+    },
+    {
+      "ko": "화면",
+      "en": "Display",
+      "zh": "显示"
+    },
+    {
+      "ko": "시야각 (FOV)",
+      "en": "Field of view (FOV)",
+      "zh": "视野（FOV）"
+    },
+    {
+      "ko": "조준점 색상",
+      "en": "Crosshair color",
+      "zh": "准星颜色"
+    },
+    {
+      "ko": "사운드",
+      "en": "Audio",
+      "zh": "声音"
+    },
+    {
+      "ko": "마스터 볼륨",
+      "en": "Master volume",
+      "zh": "主音量"
+    },
+    {
+      "ko": "이동",
+      "en": "Move",
+      "zh": "移动"
+    },
+    {
+      "ko": "Shift (누르고 있기)",
+      "en": "Shift (hold)",
+      "zh": "Shift（按住）"
+    },
+    {
+      "ko": "달리기",
+      "en": "Sprint",
+      "zh": "冲刺"
+    },
+    {
+      "ko": "점프 · 일어서기",
+      "en": "Jump · Stand",
+      "zh": "跳跃 · 站立"
+    },
+    {
+      "ko": "앉기",
+      "en": "Crouch",
+      "zh": "蹲下"
+    },
+    {
+      "ko": "엎드리기",
+      "en": "Prone",
+      "zh": "卧倒"
+    },
+    {
+      "ko": "왼쪽 · 오른쪽 기울이기",
+      "en": "Lean left · right",
+      "zh": "左倾 · 右倾"
+    },
+    {
+      "ko": "기울이기",
+      "en": "Lean",
+      "zh": "侧身"
+    },
+    {
+      "ko": "마우스 왼쪽",
+      "en": "Left mouse",
+      "zh": "鼠标左键"
+    },
+    {
+      "ko": "마우스 오른쪽",
+      "en": "Right mouse",
+      "zh": "鼠标右键"
+    },
+    {
+      "ko": "사격",
+      "en": "Fire",
+      "zh": "射击"
+    },
+    {
+      "ko": "조준",
+      "en": "Aim",
+      "zh": "瞄准"
+    },
+    {
+      "ko": "재장전",
+      "en": "Reload",
+      "zh": "换弹"
+    },
+    {
+      "ko": "주무기 · 보조무기",
+      "en": "Primary · Sidearm",
+      "zh": "主武器 · 副武器"
+    },
+    {
+      "ko": "수류탄 · 섬광탄 · 연막탄",
+      "en": "Frag · Flash · Smoke",
+      "zh": "手雷 · 闪光弹 · 烟雾弹"
+    },
+    {
+      "ko": "좌 / 우클릭",
+      "en": "Left / Right click",
+      "zh": "左键 / 右键"
+    },
+    {
+      "ko": "멀리 던지기 · 가까이 굴리기",
+      "en": "Long throw · Short lob",
+      "zh": "远投 · 近抛"
+    },
+    {
+      "ko": "스코어보드",
+      "en": "Scoreboard",
+      "zh": "计分板"
+    },
+    {
+      "ko": "FPS 표시",
+      "en": "FPS counter",
+      "zh": "显示FPS"
+    },
+    {
+      "ko": "FPS 표시 (F3)",
+      "en": "FPS counter (F3)",
+      "zh": "显示FPS（F3）"
+    },
+    {
+      "ko": "그래픽 품질",
+      "en": "Graphics quality",
+      "zh": "画面质量"
+    },
+    {
+      "ko": "해상도 배율 (%)",
+      "en": "Render scale (%)",
+      "zh": "渲染比例（%）"
+    },
+    {
+      "ko": "낮음",
+      "en": "Low",
+      "zh": "低"
+    },
+    {
+      "ko": "중간",
+      "en": "Medium",
+      "zh": "中"
+    },
+    {
+      "ko": "높음",
+      "en": "High",
+      "zh": "高"
+    },
+    {
+      "ko": "켬",
+      "en": "On",
+      "zh": "开"
+    },
+    {
+      "ko": "끔",
+      "en": "Off",
+      "zh": "关"
+    },
+    {
+      "ko": "낮음: 그림자 · 블룸 · AO 끔, 해상도 75%    중간: 짧은 그림자, AO 끔    높음: 전체 효과\n",
+      "en": "Low: no shadows, bloom or AO; 75% scale. Medium: short shadows, no AO. High: all effects.\n",
+      "zh": "低：关闭阴影、泛光和AO，75%分辨率。中：短阴影，关闭AO。高：全部效果。\n"
+    },
+    {
+      "ko": "내장 그래픽(노트북)에서는 중간 또는 낮음을 권장합니다. 해상도 배율을 낮추면 화면은 조금 흐려지지만 프레임이 크게 오릅니다.",
+      "en": "Use Low or Medium on integrated graphics. Lower render scale improves frame rate at the cost of sharpness.",
+      "zh": "集成显卡建议使用低或中。降低渲染比例可提高帧率，但画面会变模糊。"
+    },
+    {
+      "ko": "<color=#E3A72F>그래픽 가속이 꺼져 있습니다.</color> 브라우저 설정에서 '가능한 경우 그래픽 가속 사용'(하드웨어 가속)을 켜고 ",
+      "en": "<color=#E3A72F>Graphics acceleration is disabled.</color> Enable hardware acceleration in your browser settings and ",
+      "zh": "<color=#E3A72F>图形加速已关闭。</color>请在浏览器设置中启用硬件加速，然后"
+    },
+    {
+      "ko": "브라우저를 다시 시작하세요. 지금은 GPU 대신 CPU로 그리고 있어 매우 느립니다.\n<size=16>렌더러: ",
+      "en": "restart the browser. Software rendering on the CPU is very slow.\n<size=16>Renderer: ",
+      "zh": "重启浏览器。目前使用CPU进行软件渲染，速度很慢。\n<size=16>渲染器："
+    },
+    {
+      "ko": "우클릭",
+      "en": "Right click",
+      "zh": "右键"
+    },
+    {
+      "ko": "무기",
+      "en": "Weapons",
+      "zh": "武器"
+    },
+    {
+      "ko": "전사",
+      "en": "Killed",
+      "zh": "阵亡"
+    },
+    {
+      "ko": "처치한 적",
+      "en": "Killed by",
+      "zh": "击杀者"
+    },
+    {
+      "ko": "남은 체력",
+      "en": "Remaining health",
+      "zh": "剩余生命"
+    },
+    {
+      "ko": "다음 배치 무장",
+      "en": "Next deployment loadout",
+      "zh": "下次部署装备"
+    },
+    {
+      "ko": "조준경",
+      "en": "Optic",
+      "zh": "瞄具"
+    },
+    {
+      "ko": "조준경  <color=#ECEAE3>",
+      "en": "Optic  <color=#ECEAE3>",
+      "zh": "瞄具  <color=#ECEAE3>"
+    },
+    {
+      "ko": "   <color=#E3A72F>[F]</color> 변경",
+      "en": "   <color=#E3A72F>[F]</color> Change",
+      "zh": "   <color=#E3A72F>[F]</color> 切换"
+    },
+    {
+      "ko": "다음 라운드에 재배치  ·  <color=#E3A72F>아군 관전</color>으로 전환합니다",
+      "en": "Deploy next round · Switching to <color=#E3A72F>team spectating</color>",
+      "zh": "下回合重新部署 · 切换至<color=#E3A72F>队友观战</color>"
+    },
+    {
+      "ko": "</color></size></font>  초 후 재배치",
+      "en": "</color></size></font>  s until respawn",
+      "zh": "</color></size></font>  秒后重生"
+    },
+    {
+      "ko": "  ·  헤드샷",
+      "en": "  ·  Headshot",
+      "zh": "  ·  爆头"
+    },
+    {
+      "ko": "선택한 무기는 다음 부활 또는 다음 라운드에 적용됩니다.",
+      "en": "Selected loadout applies on your next respawn or round.",
+      "zh": "所选装备将在下次重生或下一回合生效。"
+    },
+    {
+      "ko": "돌격소총",
+      "en": "Assault rifle",
+      "zh": "突击步枪"
+    },
+    {
+      "ko": "기관단총",
+      "en": "SMG",
+      "zh": "冲锋枪"
+    },
+    {
+      "ko": "저격소총",
+      "en": "Sniper rifle",
+      "zh": "狙击步枪"
+    },
+    {
+      "ko": "산탄총",
+      "en": "Shotgun",
+      "zh": "霰弹枪"
+    },
+    {
+      "ko": "권총",
+      "en": "Pistol",
+      "zh": "手枪"
+    },
+    {
+      "ko": "레드닷",
+      "en": "Red dot",
+      "zh": "红点"
+    },
+    {
+      "ko": "4배율",
+      "en": "4x scope",
+      "zh": "4倍镜"
+    },
+    {
+      "ko": "8배율",
+      "en": "8x scope",
+      "zh": "8倍镜"
+    },
+    {
+      "ko": "기본 조준기",
+      "en": "Iron sights",
+      "zh": "机械瞄具"
+    },
+    {
+      "ko": "체력",
+      "en": "Health",
+      "zh": "生命"
+    },
+    {
+      "ko": "핀 제거",
+      "en": "Pin pulled",
+      "zh": "已拔保险"
+    },
+    {
+      "ko": "투척",
+      "en": "Throw",
+      "zh": "投掷"
+    },
+    {
+      "ko": "</size>  초",
+      "en": "</size>  s",
+      "zh": "</size>  秒"
+    },
+    {
+      "ko": "[좌] 멀리  [우] 가까이",
+      "en": "[LMB] Long  [RMB] Short",
+      "zh": "[左键] 远投  [右键] 近抛"
+    },
+    {
+      "ko": "앉기  <color=#ECEAE3>[C]</color>",
+      "en": "Crouch  <color=#ECEAE3>[C]</color>",
+      "zh": "蹲下  <color=#ECEAE3>[C]</color>"
+    },
+    {
+      "ko": "엎드리기  <color=#ECEAE3>[Z]</color>",
+      "en": "Prone  <color=#ECEAE3>[Z]</color>",
+      "zh": "卧倒  <color=#ECEAE3>[Z]</color>"
+    },
+    {
+      "ko": "재장전 중",
+      "en": "Reloading",
+      "zh": "换弹中"
+    },
+    {
+      "ko": "탄약 없음",
+      "en": "No ammo",
+      "zh": "无弹药"
+    },
+    {
+      "ko": "[R] 재장전",
+      "en": "[R] Reload",
+      "zh": "[R] 换弹"
+    },
+    {
+      "ko": "수류탄",
+      "en": "Frag",
+      "zh": "手雷"
+    },
+    {
+      "ko": "섬광탄",
+      "en": "Flashbang",
+      "zh": "闪光弹"
+    },
+    {
+      "ko": "연막탄",
+      "en": "Smoke grenade",
+      "zh": "烟雾弹"
+    },
+    {
+      "ko": "섬광",
+      "en": "Flash",
+      "zh": "闪光"
+    },
+    {
+      "ko": "연막",
+      "en": "Smoke",
+      "zh": "烟雾"
+    },
+    {
+      "ko": "개인전",
+      "en": "Free for all",
+      "zh": "自由混战"
+    },
+    {
+      "ko": "섬멸전",
+      "en": "Elimination",
+      "zh": "歼灭战"
+    },
+    {
+      "ko": "팀 데스매치",
+      "en": "Team deathmatch",
+      "zh": "团队死斗"
+    },
+    {
+      "ko": "승",
+      "en": " wins",
+      "zh": "胜"
+    },
+    {
+      "ko": "킬",
+      "en": " kills",
+      "zh": "击杀"
+    },
+    {
+      "ko": "알파",
+      "en": "Alpha",
+      "zh": "阿尔法"
+    },
+    {
+      "ko": "브라보",
+      "en": "Bravo",
+      "zh": "布拉沃"
+    },
+    {
+      "ko": "창고",
+      "en": "Warehouse",
+      "zh": "仓库"
+    },
+    {
+      "ko": "전초기지",
+      "en": "Outpost",
+      "zh": "前哨站"
+    },
+    {
+      "ko": "관전 중",
+      "en": "Spectating",
+      "zh": "观战中"
+    },
+    {
+      "ko": "생존",
+      "en": "Alive",
+      "zh": "存活"
+    },
+    {
+      "ko": "배치 완료  ·  시작 전까지 이동 · 사격 불가",
+      "en": "Deployed · Movement and firing unlock at round start",
+      "zh": "部署完成 · 回合开始前无法移动或射击"
+    },
+    {
+      "ko": "<color=#E3A72F>[클릭 / Space]</color>  다음 아군",
+      "en": "<color=#E3A72F>[Click / Space]</color>  Next teammate",
+      "zh": "<color=#E3A72F>[点击 / 空格]</color>  下一位队友"
+    },
+    {
+      "ko": "<color=#E3A72F>[클릭 / Space]</color>  ",
+      "en": "<color=#E3A72F>[Click / Space]</color>  ",
+      "zh": "<color=#E3A72F>[点击 / 空格]</color>  "
+    },
+    {
+      "ko": "다음 아군",
+      "en": "Next teammate",
+      "zh": "下一位队友"
+    },
+    {
+      "ko": "아군 전멸  ·  다음 생존자",
+      "en": "Team eliminated · Next survivor",
+      "zh": "队友全部阵亡 · 下一位存活者"
+    },
+    {
+      "ko": "라운드 ",
+      "en": "Round ",
+      "zh": "回合 "
+    },
+    {
+      "ko": "시간 종료 · 생존 인원 동일",
+      "en": "Time up · Equal survivors",
+      "zh": "时间结束 · 存活人数相同"
+    },
+    {
+      "ko": "시간 종료 · 생존 인원 우세",
+      "en": "Time up · More survivors",
+      "zh": "时间结束 · 存活人数更多"
+    },
+    {
+      "ko": "양 팀 전멸",
+      "en": "Both teams eliminated",
+      "zh": "双方全部阵亡"
+    },
+    {
+      "ko": " 전멸",
+      "en": " eliminated",
+      "zh": " 全部阵亡"
+    },
+    {
+      "ko": "  ·  작전 종료",
+      "en": "  ·  Match over",
+      "zh": "  ·  比赛结束"
+    },
+    {
+      "ko": "상대 팀 인원을 기다리는 중  ·  양 팀에 한 명 이상 있으면 라운드가 시작됩니다",
+      "en": "Waiting for opponents · Starts with one player on each team",
+      "zh": "等待对手 · 双方各一人即可开始"
+    },
+    {
+      "ko": "플레이어를 기다리는 중 · 2명이 접속하면 시작합니다",
+      "en": "Waiting for players · Starts with 2 connected players",
+      "zh": "等待玩家 · 2人连接后开始"
+    },
+    {
+      "ko": "  ·  라운드 <color=#ECEAE3>",
+      "en": "  ·  Round <color=#ECEAE3>",
+      "zh": "  ·  回合 <color=#ECEAE3>"
+    },
+    {
+      "ko": "  ·  목표 <color=#ECEAE3>",
+      "en": "  ·  Goal <color=#ECEAE3>",
+      "zh": "  ·  目标 <color=#ECEAE3>"
+    },
+    {
+      "ko": "아군 ",
+      "en": "Allies ",
+      "zh": "队友 "
+    },
+    {
+      "ko": "적군 ",
+      "en": "Enemies ",
+      "zh": "敌人 "
+    },
+    {
+      "ko": "나  ·  1위",
+      "en": "Me · Leading",
+      "zh": "我 · 第一名"
+    },
+    {
+      "ko": "나",
+      "en": "Me",
+      "zh": "我"
+    },
+    {
+      "ko": "1위 ",
+      "en": "1st ",
+      "zh": "第一名 "
+    },
+    {
+      "ko": "2위 ",
+      "en": "2nd ",
+      "zh": "第二名 "
+    },
+    {
+      "ko": "점수",
+      "en": "Score",
+      "zh": "分数"
+    },
+    {
+      "ko": "핑",
+      "en": "Ping",
+      "zh": "延迟"
+    },
+    {
+      "ko": "작전 종료",
+      "en": "Match over",
+      "zh": "比赛结束"
+    },
+    {
+      "ko": "  ·  생존 ",
+      "en": "  ·  Alive ",
+      "zh": "  ·  存活 "
+    },
+    {
+      "ko": "  ·  라운드 ",
+      "en": "  ·  Round ",
+      "zh": "  ·  回合 "
+    },
+    {
+      "ko": "</color> 님이 이번 작전 1위입니다.",
+      "en": "</color> leads this match.",
+      "zh": "</color> 是本场第一名。"
+    },
+    {
+      "ko": "초 후 다음 작전이 시작됩니다.",
+      "en": " s until the next match.",
+      "zh": " 秒后开始下一场比赛。"
+    },
+    {
+      "ko": "Tab 키를 떼면 닫힙니다",
+      "en": "Release Tab to close",
+      "zh": "松开Tab关闭"
+    },
+    {
+      "ko": " 팀",
+      "en": " team",
+      "zh": " 队"
+    },
+    {
+      "ko": "  <size=70%>(아군)</size>",
+      "en": "  <size=70%>(Allies)</size>",
+      "zh": "  <size=70%>（队友）</size>"
+    },
+    {
+      "ko": "명",
+      "en": " players",
+      "zh": "人"
+    },
+    {
+      "ko": "무승부",
+      "en": "Draw",
+      "zh": "平局"
+    },
+    {
+      "ko": " 승리",
+      "en": " wins",
+      "zh": " 胜利"
+    },
+    {
+      "ko": " 팀 승리",
+      "en": " team wins",
+      "zh": " 队获胜"
+    },
+    {
+      "ko": ">승리</color>",
+      "en": ">Victory</color>",
+      "zh": ">胜利</color>"
+    },
+    {
+      "ko": ">패배</color>",
+      "en": ">Defeat</color>",
+      "zh": ">失败</color>"
+    },
+    {
+      "ko": "1위 달성",
+      "en": "First place",
+      "zh": "第一名"
+    },
+    {
+      "ko": "알 수 없음",
+      "en": "Unknown",
+      "zh": "未知"
+    },
+    {
+      "ko": "로컬 서버  ",
+      "en": "Local server  ",
+      "zh": "本地服务器  "
+    },
+    {
+      "ko": "로컬 서버",
+      "en": "Local server",
+      "zh": "本地服务器"
+    },
+    {
+      "ko": "서버 설정",
+      "en": "Server settings",
+      "zh": "服务器设置"
+    },
+    {
+      "ko": "서버 응답을 이해할 수 없습니다.",
+      "en": "Invalid server response.",
+      "zh": "无法识别服务器响应。"
+    },
+    {
+      "ko": "이름 없는 작전",
+      "en": "Unnamed room",
+      "zh": "未命名房间"
+    },
+    {
+      "ko": "방이 가득 찼습니다. 다른 방을 골라 주세요.",
+      "en": "Room full. Choose another room.",
+      "zh": "房间已满，请选择其他房间。"
+    },
+    {
+      "ko": "이미 종료된 방입니다. 목록을 새로 고칩니다.",
+      "en": "Room ended. Refreshing the list.",
+      "zh": "房间已结束，正在刷新列表。"
+    },
+    {
+      "ko": "지금은 모든 서버가 가득 찼습니다. 잠시 후 다시 시도해 주세요.",
+      "en": "All servers are full. Try again shortly.",
+      "zh": "所有服务器已满，请稍后重试。"
+    },
+    {
+      "ko": "서버를 준비하는 중입니다. 몇 초 후 다시 시도해 주세요.",
+      "en": "Server is starting. Try again in a few seconds.",
+      "zh": "服务器正在启动，请稍后重试。"
+    },
+    {
+      "ko": "요청이 올바르지 않습니다. 이름을 확인해 주세요.",
+      "en": "Invalid request. Check your name.",
+      "zh": "请求无效，请检查名称。"
+    },
+    {
+      "ko": "로비 서버에 연결할 수 없습니다. 인터넷 연결을 확인해 주세요.",
+      "en": "Cannot reach the lobby. Check your connection.",
+      "zh": "无法连接大厅，请检查网络。"
+    },
+    {
+      "ko": "요청이 너무 많습니다. 잠시 후 다시 시도해 주세요.",
+      "en": "Too many requests. Try again shortly.",
+      "zh": "请求过多，请稍后重试。"
+    },
+    {
+      "ko": "로비 서버 오류가 발생했습니다 (",
+      "en": "Lobby server error (",
+      "zh": "大厅服务器错误（"
+    },
+    {
+      "ko": "작전 목록을 불러오는 중…",
+      "en": "Loading rooms…",
+      "zh": "正在加载房间…"
+    },
+    {
+      "ko": "로컬 개발 서버  <color=#ECEAE3>",
+      "en": "Local dev server  <color=#ECEAE3>",
+      "zh": "本地开发服务器  <color=#ECEAE3>"
+    },
+    {
+      "ko": "REGION <color=#ECEAE3>SEOUL</color>    작전 <color=#ECEAE3>",
+      "en": "REGION <color=#ECEAE3>SEOUL</color>    Rooms <color=#ECEAE3>",
+      "zh": "地区 <color=#ECEAE3>首尔</color>    房间 <color=#ECEAE3>"
+    },
+    {
+      "ko": "</color>    접속 <color=#ECEAE3>",
+      "en": "</color>    Players <color=#ECEAE3>",
+      "zh": "</color>    玩家 <color=#ECEAE3>"
+    },
+    {
+      "ko": "작전에 참가하는 중…",
+      "en": "Joining room…",
+      "zh": "正在加入房间…"
+    },
+    {
+      "ko": "빈 자리를 찾는 중…",
+      "en": "Finding an open slot…",
+      "zh": "正在寻找空位…"
+    },
+    {
+      "ko": "새 작전을 여는 중…",
+      "en": "Creating room…",
+      "zh": "正在创建房间…"
+    },
+    {
+      "ko": "서버에 접속하는 중…",
+      "en": "Connecting to server…",
+      "zh": "正在连接服务器…"
+    },
+    {
+      "ko": "서버에 접속하지 못했습니다.",
+      "en": "Could not connect to the server.",
+      "zh": "无法连接服务器。"
+    },
+    {
+      "ko": "서버와의 연결이 끊어졌습니다.",
+      "en": "Disconnected from the server.",
+      "zh": "与服务器的连接已断开。"
+    },
+    {
+      "ko": "서버에 접속하지 못했습니다. 잠시 후 다시 시도해 주세요.",
+      "en": "Could not connect. Try again shortly.",
+      "zh": "无法连接，请稍后重试。"
+    },
+    {
+      "ko": "게임 버전이 서버와 다릅니다. 페이지를 새로 고쳐 주세요.",
+      "en": "Client and server versions differ. Refresh the page.",
+      "zh": "客户端与服务器版本不同，请刷新页面。"
+    },
+    {
+      "ko": "콜사인이 비어 있습니다.",
+      "en": "Callsign is empty.",
+      "zh": "呼号不能为空。"
+    },
+    {
+      "ko": "서버가 아직 준비되지 않았습니다. 잠시 후 다시 시도해 주세요.",
+      "en": "Server is not ready. Try again shortly.",
+      "zh": "服务器尚未就绪，请稍后重试。"
+    },
+    {
+      "ko": "방이 가득 찼습니다.",
+      "en": "Room is full.",
+      "zh": "房间已满。"
+    },
+    {
+      "ko": "입장권이 만료되었습니다. 로비에서 다시 참가해 주세요.",
+      "en": "Session ticket expired. Rejoin from the lobby.",
+      "zh": "会话凭证已过期，请从大厅重新加入。"
+    },
+    {
+      "ko": "비정상적인 플레이가 감지되어 서버에서 연결이 끊어졌습니다.",
+      "en": "Disconnected due to abnormal gameplay.",
+      "zh": "检测到异常游戏行为，连接已断开。"
+    },
+    {
+      "key": "event.join",
+      "ko": "{0} 님이 작전에 합류했습니다",
+      "en": "{0} joined the match",
+      "zh": "{0} 加入了比赛"
+    },
+    {
+      "key": "event.joinlate",
+      "ko": "{0} 님이 합류했습니다 · 다음 라운드부터 투입",
+      "en": "{0} joined · Deploys next round",
+      "zh": "{0} 加入 · 下一回合部署"
+    },
+    {
+      "key": "event.leave",
+      "ko": "{0} 님이 작전에서 이탈했습니다",
+      "en": "{0} left the match",
+      "zh": "{0} 离开了比赛"
+    },
+    {
+      "key": "event.spawn",
+      "ko": "{0} 님이 재배치되었습니다",
+      "en": "{0} redeployed",
+      "zh": "{0} 已重新部署"
+    },
+    {
+      "key": "event.balance",
+      "ko": "{0} 님의 팀이 인원 균형을 위해 변경되었습니다",
+      "en": "{0} changed teams to balance players",
+      "zh": "{0} 已调整队伍以平衡人数"
+    },
+    {
+      "key": "event.wait",
+      "ko": "상대 팀 인원을 기다리는 중 · 2명부터 시작",
+      "en": "Waiting for opponents · Starts with 2",
+      "zh": "等待对手 · 2人开始"
+    },
+    {
+      "key": "event.round",
+      "ko": "라운드 {0} · {1} : {2} · {3}초 후 시작",
+      "en": "Round {0} · {1} : {2} · Starts in {3}s",
+      "zh": "回合 {0} · {1} : {2} · {3}秒后开始"
+    },
+    {
+      "key": "event.roundend",
+      "ko": "라운드 {0} 종료 · {1} : {2}",
+      "en": "Round {0} over · {1} : {2}",
+      "zh": "回合 {0} 结束 · {1} : {2}"
+    },
+    {
+      "key": "event.end",
+      "ko": "작전 종료 · {0}초 후 다음 작전이 시작됩니다",
+      "en": "Match over · Next match in {0}s",
+      "zh": "比赛结束 · {0}秒后开始下一场"
+    },
+    {
+      "key": "event.start",
+      "ko": "새 작전이 시작되었습니다",
+      "en": "A new match has started",
+      "zh": "新比赛已开始"
+    },
+    {
+      "key": "room.count",
+      "ko": "{0}개 방 · {1}명 접속",
+      "en": "{0} ROOMS · {1} PLAYERS",
+      "zh": "{0}个房间 · {1}位玩家"
+    },
+    {
+      "ko": "언어",
+      "en": "Language",
+      "zh": "语言"
+    },
+    {
+      "key": "graphics.note",
+      "ko": "낮음: 그림자 · 블룸 · AO 끔, 해상도 75%    중간: 짧은 그림자, AO 끔    높음: 전체 효과\n내장 그래픽(노트북)에서는 중간 또는 낮음을 권장합니다. 해상도 배율을 낮추면 화면은 조금 흐려지지만 프레임이 크게 오릅니다.",
+      "en": "Low: no shadows, bloom or AO; 75% scale. Medium: short shadows, no AO. High: all effects.\nUse Low or Medium on integrated graphics. Lower render scale improves frame rate at the cost of sharpness.",
+      "zh": "低：关闭阴影、泛光和AO，75%分辨率。中：短阴影，关闭AO。高：全部效果。\n集成显卡建议使用低或中。降低渲染比例可提高帧率，但画面会变模糊。"
+    },
+    {
+      "key": "graphics.software",
+      "ko": "<color=#E3A72F>그래픽 가속이 꺼져 있습니다.</color> 브라우저의 하드웨어 가속을 켜고 다시 시작하세요.\n<size=16>렌더러: {0}</size>",
+      "en": "<color=#E3A72F>Graphics acceleration is disabled.</color> Enable hardware acceleration and restart your browser.\n<size=16>Renderer: {0}</size>",
+      "zh": "<color=#E3A72F>图形加速已关闭。</color>请启用硬件加速，然后重启浏览器。\n<size=16>渲染器：{0}</size>"
+    },
+    {
+      "key": "FULL",
+      "ko": "만실",
+      "en": "FULL",
+      "zh": "已满"
+    },
+    {
+      "key": "KILLS",
+      "ko": "처치",
+      "en": "KILLS",
+      "zh": "击杀"
+    },
+    {
+      "key": "DEATHS",
+      "ko": "사망",
+      "en": "DEATHS",
+      "zh": "阵亡"
+    },
+    {
+      "key": "RANK",
+      "ko": "순위",
+      "en": "RANK",
+      "zh": "排名"
+    },
+    {
+      "key": "AUTO",
+      "ko": "자동",
+      "en": "AUTO",
+      "zh": "全自动"
+    },
+    {
+      "key": "PUMP",
+      "ko": "펌프",
+      "en": "PUMP",
+      "zh": "泵动"
+    },
+    {
+      "key": "BOLT",
+      "ko": "볼트",
+      "en": "BOLT",
+      "zh": "栓动"
+    },
+    {
+      "key": "SEMI",
+      "ko": "반자동",
+      "en": "SEMI",
+      "zh": "半自动"
+    }
+  ]
+}

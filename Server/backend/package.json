@@ -1,0 +1,14 @@
+{
+  "name": "fps-lobby-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Lobby API (rooms / quickjoin) for the FPS, backed by Amazon GameLift",
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "test": "node --test"
+  },
+  "devDependencies": {
+    "@aws-sdk/client-gamelift": "^3.700.0"
+  }
+}
