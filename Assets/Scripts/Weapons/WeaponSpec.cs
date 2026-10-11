@@ -82,7 +82,7 @@ public static class Weapons {
             Damage = 13, HeadshotMultiplier = 1.5f, Interval = 0.9f, Automatic = false, Range = 40f,
             FalloffStart = 8f, FalloffEnd = 30f, MinDamageScale = 0.25f,
             Magazine = 6, Reserve = 24, ReloadTime = 3.0f, Pellets = 8, HipSpread = 4.5f, AimSpread = 3.5f, DrawTime = 0.7f, Kick = 2.5f,
-            Optics = new[] { OpticId.Iron, OpticId.RedDot },
+            Optics = new[] { OpticId.RedDot, OpticId.Iron },
         },
         new WeaponSpec {
             Id = WeaponId.Pistol, Name = "M1911", Role = "권총",

@@ -14,8 +14,8 @@ Interested in development and technology? Visit the **[LINUX.DO](https://linux.d
 
 - Matches start with **2 players**, with **up to 8 per room**. Players can join an ongoing match while slots remain; late joiners in Elimination enter the next round.
 - Team Deathmatch (TDM), Free-for-All (FFA), and Elimination.
-- AK-47, MP5, M700, M870, and M1911 pistol. Iron sights, red dot, 4×, and 8× optics where supported by the weapon.
-- Select a loadout in the lobby, Esc settings, or death screen. Changes during a match apply on the **next respawn or next round**.
+- AK-47, MP5, M700, M870, and M1911 pistol. The default AK-47 uses a red dot. Iron sights, red dot, 4×, and 8× optics where supported by the weapon.
+- Select a loadout in the lobby, Esc/P settings, or death screen. Changes during a match apply on the **next respawn or next round**.
 - Korean, English, and Simplified Chinese UI, with a saved language selection. Web URLs also accept `?lang=ko`, `?lang=en`, and `?lang=zh`.
 - Dedicated servers validate match state, scores, damage, and ammunition. This is an experimental FPS; improvements and feedback are welcome.
 
@@ -28,7 +28,7 @@ Interested in development and technology? Visit the **[LINUX.DO](https://linux.d
 | 1, 2 / mouse wheel | Switch equipped primary and pistol |
 | Shift / Space | Sprint / jump |
 | C / Z / Q, E | Crouch / prone / lean |
-| G / Esc | Cycle grenade selection / settings, loadout, language |
+| G / Esc, P | Cycle grenade selection / settings, loadout, language |
 
 ## Layout
 

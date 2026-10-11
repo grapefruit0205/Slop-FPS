@@ -5,13 +5,27 @@ public static class LoadoutChoice {
 
     private const string PrimaryKey = "loadout.primary";
     private const string OpticKey = "loadout.optic";
+    private const string DefaultsKey = "loadout.defaultsVersion";
+    private const int DefaultsVersion = 1;
 
     public static WeaponId Primary { get; private set; }
     public static OpticId Optic { get; private set; }
 
-    static LoadoutChoice() {
-        Set((WeaponId)PlayerPrefs.GetInt(PrimaryKey, (int)Weapons.Primaries[0]),
-            (OpticId)PlayerPrefs.GetInt(OpticKey, (int)Weapons.Get(Weapons.Primaries[0]).Optics[0]), false);
+    static LoadoutChoice() { LoadPreferences(); }
+
+    private static void LoadPreferences() {
+        WeaponId gun = (WeaponId)PlayerPrefs.GetInt(PrimaryKey, (int)Weapons.Primaries[0]);
+        if (!Weapons.IsPrimary(gun)) gun = Weapons.Primaries[0];
+        WeaponSpec spec = Weapons.Get(gun);
+        OpticId optic = (OpticId)PlayerPrefs.GetInt(OpticKey, (int)spec.Optics[0]);
+        // Before this version, an old stored scope could override the red-dot default indefinitely.
+        // Apply the new default once; selections made after this migration remain remembered.
+        if (PlayerPrefs.GetInt(DefaultsKey, 0) < DefaultsVersion) {
+            if (spec.Fits(OpticId.RedDot)) optic = OpticId.RedDot;
+            PlayerPrefs.SetInt(DefaultsKey, DefaultsVersion);
+        }
+        Set(gun, optic, false);
+        PlayerPrefs.Save();
     }
 
     /// <summary>Pick a gun; its optic stays if it fits, otherwise the gun's default.</summary>

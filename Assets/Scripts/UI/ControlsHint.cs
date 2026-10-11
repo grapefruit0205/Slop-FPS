@@ -15,7 +15,7 @@ public class ControlsHint : MonoBehaviour {
     /// <summary>Key, action: the bindings in FirstPersonController, PlayerStance, FpsGun, GrenadeHands and GameUI.</summary>
     public static readonly string[,] Keys = {
         { "Shift", "달리기" }, { "C", "앉기" }, { "Z", "엎드리기" }, { "Q/E", "기울이기" },
-        { "우클릭", "조준" }, { "R", "재장전" }, { "1/2", "무기" }, { "4/5/6", "수류탄" }, { "Tab", "스코어보드" },
+        { "우클릭", "조준" }, { "R", "재장전" }, { "1/2", "무기" }, { "4/5/6", "수류탄" }, { "Tab", "스코어보드" }, { "P", "설정" },
     };
 
     private CanvasGroup group;

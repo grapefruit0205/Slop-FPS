@@ -72,6 +72,14 @@ public static class GameplayChecks {
             pick.onClick.Invoke();
             Require(LoadoutChoice.Primary == WeaponId.Sniper && Weapons.Get(WeaponId.Sniper).Fits(LoadoutChoice.Optic), "Lobby choice and legal optic");
             ui.EnterGame();
+            ui.Pause.SetVisible(true);
+            typeof(GameUI).GetMethod("Update", BindingFlags.NonPublic | BindingFlags.Instance).Invoke(ui, null);
+            Require(Cursor.lockState == CursorLockMode.None && Cursor.visible && SlopFPS.Input.FpsInputGate.Blocked,
+                "Pause opens cursor and blocks gameplay");
+            Require(ui.Pause.GetComponentsInChildren<TMP_Text>(true).Any(t => t.text == "Esc / P"), "Fullscreen-safe pause shortcut is visible");
+            ui.Pause.SetVisible(false);
+            typeof(GameUI).GetMethod("Update", BindingFlags.NonPublic | BindingFlags.Instance).Invoke(ui, null);
+            Require(!SlopFPS.Input.FpsInputGate.Blocked, "Resuming restores gameplay input");
             ui.Death.Show("English玩家", "AK-47", false, 10, 50, 8);
             typeof(GameUI).GetMethod("Update", BindingFlags.NonPublic | BindingFlags.Instance).Invoke(ui, null);
             Require(Cursor.lockState == CursorLockMode.None && Cursor.visible && SlopFPS.Input.FpsInputGate.Blocked,

@@ -36,7 +36,7 @@ Create `Assets/Scenes/Start.unity` with a `GameNetwork`, a scene camera, player 
 
 Run **Tools → FPS → Network Setup (FishNet)** only after the avatar prefabs and scene exist. It configures the `Network` root with FishNet, Bayou, authentication and `GameServer`, plus the `NetPlayer` and `MatchManager` prefabs.
 
-`MapLoader` captures the scene as the `warehouse` map. Its warehouse bounds/spawn validation assume the production layout; adapt `MapBounds.ConfigureWarehouse` to your own arena. For a second map, create a `MapDefinition` prefab and a Resources `MapCatalog` asset; inspect `MapDefinition` and `MapLoader`. Production Outpost geometry is excluded. Old import tools such as `MixamoImport`, `SoldierAvatars`, `WeaponRig` and `MapBuilder_Outpost` expect missing inputs and are **not** first-run setup commands.
+`MapLoader` captures the scene as the `warehouse` map. Its warehouse bounds/spawn validation assume the production layout; adapt `MapBounds.ConfigureWarehouse` to your own arena. The current warehouse filter rejects rooftop/outside spawns and accepts spawn markers within 3 world units of its floor. For a second map, create a `MapDefinition` prefab and a Resources `MapCatalog` asset; inspect `MapDefinition` and `MapLoader`. Production Outpost geometry is excluded. Old import tools such as `MixamoImport`, `SoldierAvatars`, `WeaponRig` and `MapBuilder_Outpost` expect missing inputs and are **not** first-run setup commands.
 
 Check team spawn assignment, grounding, collision layers, movement validation, gun origins, damage and respawns with two local clients before enabling a public server. Use protocol-matching server and client builds.
 

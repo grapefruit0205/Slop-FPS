@@ -26,6 +26,11 @@ public class GameUI : MonoBehaviour {
     /// <summary>Set by dev screenshot mode so stray key presses don't change screens.</summary>
     public bool IgnoreKeys { get; set; }
 
+#if UNITY_WEBGL && !UNITY_EDITOR
+    [System.Runtime.InteropServices.DllImport("__Internal")]
+    private static extern void FpsBrowser_Init();
+#endif
+
     public static GameUI Create() {
         GameSettings.Load();
         GraphicsQuality.Load();
@@ -47,6 +52,9 @@ public class GameUI : MonoBehaviour {
 
         GameUI ui = go.AddComponent<GameUI>();
         ui.Build();
+#if UNITY_WEBGL && !UNITY_EDITOR
+        FpsBrowser_Init();
+#endif
         return ui;
     }
 
@@ -83,7 +91,7 @@ public class GameUI : MonoBehaviour {
 
     void Update() {
         if (InGame) {
-            if (!IgnoreKeys && Input.GetKeyDown(KeyCode.Escape)) {
+            if (!IgnoreKeys && (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))) {
                 Pause.SetVisible(!Pause.Visible);
             }
             bool matchOver = MatchManager.Instance != null && MatchManager.Instance.IsOver;

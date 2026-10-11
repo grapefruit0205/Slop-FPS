@@ -32,6 +32,7 @@ public class MapBounds : MonoBehaviour {
         new Vector2(-29.25f, -48.35f),  // south-west corner
     };
     private const float WarehouseFloor = 0f;
+    private const float WarehouseMaxSpawnHeight = 3f; // ground spawns sit at y=2; rooftop spawns were y=11.8 / 17
     private const float WarehouseWallHeight = 45f;   // roofs top out at ~19.5
 
     private MapDefinition map;
@@ -45,7 +46,7 @@ public class MapBounds : MonoBehaviour {
 
     /// <summary>
     /// The scene's warehouse definition: give it its outline, and keep only the spawn points inside the compound (the scene
-    /// also has some out in the streets, which nobody should start from now). Returns the spawns to use. Call
+    /// also has some out in the streets and on rooftops, which nobody should start from). Returns the spawns to use. Call
     /// <see cref="Install"/> once its team spawns are set too.
     /// </summary>
     public static Transform[] ConfigureWarehouse(MapDefinition def, Transform[] spawns) {
@@ -57,12 +58,13 @@ public class MapBounds : MonoBehaviour {
         List<string> dropped = new List<string>();
         foreach (Transform t in spawns ?? new Transform[0]) {
             if (t == null) continue;
-            if (def.InPlayArea(t.position)) kept.Add(t);
+            if (def.InPlayArea(t.position) && Mathf.Abs(t.position.y - WarehouseFloor) <= WarehouseMaxSpawnHeight) kept.Add(t);
             else dropped.Add(t.name + " " + t.position.ToString("F0"));
         }
-        if (dropped.Count > 0) Debug.Log("[MapBounds] " + def.id + ": " + dropped.Count + " spawn point(s) outside the play area left out: " + string.Join(", ", dropped));
-        // Every spawn outside would leave nowhere to start; better the old points than none.
-        Transform[] result = kept.Count > 0 ? kept.ToArray() : spawns;
+        if (dropped.Count > 0) Debug.Log("[MapBounds] " + def.id + ": " + dropped.Count + " spawn point(s) outside the ground-level play area left out: " + string.Join(", ", dropped));
+        // Do not restore rejected roof/outside points as a fallback. Invalid map setup should fail visibly.
+        if (kept.Count == 0) Debug.LogError("[MapBounds] Warehouse has no valid ground-level spawn points.");
+        Transform[] result = kept.ToArray();
         def.spawnPoints = result;
         return result;
     }
