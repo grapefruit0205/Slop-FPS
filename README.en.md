@@ -6,6 +6,8 @@ A **public source edition** of a browser multiplayer FPS built with Unity. Based
 
 **[Play in your browser](https://d34odl5jhuo0lc.cloudfront.net/)** · [Issues / feedback](https://github.com/grapefruit0205/Slop-FPS/issues)
 
+Interested in development and technology? Visit the **[LINUX.DO](https://linux.do/)** community.
+
 > This is a source edition. Production characters, animations, maps, and player prefabs are omitted because their source assets cannot be freely redistributed or their permissions were not verified. **A fresh clone is not a complete, immediately playable or buildable Unity project.** See the asset setup guide below. The browser demo is an already compiled game.
 
 ## Features
